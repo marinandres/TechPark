@@ -1,0 +1,119 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: white;
+    overflow: hidden;
+    background-color: #008080;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Control Panel */
+.control-panel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    z-index: 3;
+}
+
+.left-buttons {
+    display: flex;
+    gap: 10px; /* Spacing between left buttons */
+    padding-left: 5px;
+    padding-bottom: 130px;  
+    align-items: center; /* Centers buttons vertically */
+}
+
+.right-buttons {
+    display: flex;
+    flex-direction: column; /* Buttons arranged in a column */
+    gap: 10px; /* Spacing between right buttons */
+    padding-right: 20px;
+    align-items: center; /* Centers buttons horizontally */
+    width: auto;
+    height: auto;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #008080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #2980b9;
+}
+
+/* Webcam Video Container */
+.canvas-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 300px;
+    height: 240px;
+    z-index: 2;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#webcam {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* 3D Viewer */
+.viewer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#renderCanvas {
+    width: 100%;
+    height: 100%;
+    background-color: #008080;
+}
+
+.instruction-text {
+    position: absolute;
+    bottom: 100px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    font-size: 42px; /* Large font size */
+    color: white;
+    text-align: center; /* Center text */
+    z-index: 3; /* Ensure it's above other elements */
+    opacity: 1; /* Start fully visible */
+    transition: opacity 1s ease, transform 1s ease; /* Smooth transition */
+}
+
+/* Fade-out class */
+.fade-out {
+    opacity: 0; /* Make invisible */
+    transform: translate(-50%, -20px); /* Move upwards slightly */
+}
+
+

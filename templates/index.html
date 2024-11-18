@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Reconstruction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="control-panel">
+            <div class="left-buttons">
+                <button class="button start">Start Webcam</button>
+                <button class="button stop">Stop Webcam</button>
+            </div>
+            <div class="right-buttons">
+                <button class="button continue">Continue</button>
+                <button class="button restart">Restart</button>
+                <button class="button exit">Exit</button>
+            </div>
+        </div>
+        <div class="canvas-container">
+            <video id="webcam" autoplay playsinline></video>
+        </div>
+        <div class="viewer">
+            <div id="3d-viewer"></div>
+            <canvas id="renderCanvas"></canvas>
+        </div>
+        <div class="instruction-text" id="instructionText">
+            Are you ready to play with 3D Objects?
+        </div>
+    </div>
+    <script type="module" src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
